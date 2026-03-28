@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ProjectileManager : MonoBehaviour
 {
-    public GameObject projectile;
+    public GameObject[] projectile = new GameObject[3];
     public float minSpawnTime = 2f;
     public float maxSpawnTime = 4f;
 
@@ -34,6 +34,8 @@ public class ProjectileManager : MonoBehaviour
     void spawnProjectile()
     {
         yPosition = Random.Range(0, 4);
-        Instantiate(projectile, new Vector3(transform.position.x, yPosition, 0), transform.rotation);
+        int index = Random.Range(0, projectile.Length);
+
+        Instantiate(projectile[index], new Vector3(transform.position.x, yPosition, 0), transform.rotation);
     }
 }

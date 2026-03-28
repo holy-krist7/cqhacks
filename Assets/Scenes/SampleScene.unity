@@ -430,7 +430,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b30655620e6024194b97a02286b67b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProjectileManager
-  projectile: {fileID: 6300705557425886351, guid: 540b6954fc973c047af037e34103183b, type: 3}
+  projectile:
+  - {fileID: 6300705557425886351, guid: 540b6954fc973c047af037e34103183b, type: 3}
+  - {fileID: 6923408356094737052, guid: 0981a973b58344b478698c27e2cb14de, type: 3}
+  - {fileID: 5195580172282923952, guid: bc17c63e3f0e7ed4cb074962efbf764d, type: 3}
   minSpawnTime: 2
   maxSpawnTime: 6
 --- !u!1001 &1631717151
