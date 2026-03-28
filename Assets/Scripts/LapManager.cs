@@ -15,7 +15,7 @@ public class LapManager : MonoBehaviour
     public GameObject finishLine;
 
     private float lapTimer;
-    private float lapWaitTimer = 60;
+    private float lapWaitTimer = 15;
 
 
     public int CurrentLap;
@@ -43,6 +43,7 @@ public class LapManager : MonoBehaviour
         if (CurrentLap >= 3)
         {
             SceneManager.LoadScene("WinScene");
+            return;
         }
 
         CopCarManager.Change(copValues[CurrentLap]);
