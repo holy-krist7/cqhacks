@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8179087551985786843}
   - component: {fileID: 5454052117495766737}
   - component: {fileID: 8616745698681589217}
+  - component: {fileID: -3328711338535371576}
   m_Layer: 0
   m_Name: PopcornProjectile
   m_TagString: Untagged
@@ -225,3 +226,15 @@ MonoBehaviour:
   shootSpeed: 8
   deadZone: -12
   rotationSpeed: 360
+--- !u!114 &-3328711338535371576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5195580172282923952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e72d738002b0b24ab06b5aac58adb1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Obstacle

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Grandma : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Grandma : MonoBehaviour
 
     private float xDirection = -1f;
     private SpriteRenderer sr;
+
 
     private void Awake()
     {
@@ -38,14 +40,6 @@ public class Grandma : MonoBehaviour
         {
             Debug.Log("Grandma Deleted");
             Destroy(gameObject);
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
-        {
-            Debug.Log("Grandma hit the player");
         }
     }
 }
