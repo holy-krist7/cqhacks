@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5976693285331922819}
   - component: {fileID: 2736988225048283776}
   - component: {fileID: 4976853172683439425}
+  - component: {fileID: 4070784016398277598}
   m_Layer: 0
   m_Name: PlayerCar
   m_TagString: Player
@@ -125,6 +126,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 10, y: 15}
   m_EdgeRadius: 0
+--- !u!114 &4070784016398277598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243831698954257585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d053b5797cf466047b16c033149349be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player
+  playerHP: 3
+  cooldownTime: 10
+  timer: 0
+  isCooldown: 0
 --- !u!1 &7634615964317099889
 GameObject:
   m_ObjectHideFlags: 0

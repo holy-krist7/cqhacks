@@ -4,6 +4,7 @@ using TMPro;
 
 public class CustomFontParser : MonoBehaviour
 {
+    [SerializeField] string startingText;
     [SerializeField] private TMPro.TextMeshProUGUI text;
     private Dictionary<char, int> charIds = new();
 
@@ -20,11 +21,16 @@ public class CustomFontParser : MonoBehaviour
         charIds.Add('9', 9);
         charIds.Add('0', 10);
         charIds.Add(':', 0);
+        charIds.Add('L', 11);
+        charIds.Add('A', 12);
+        charIds.Add('P', 13);
+        charIds.Add('S', 14);
+        charIds.Add('/', 15);
     }
 
     private void Start()
     {
-        SetText("1010");
+        SetText(startingText);
     }
 
     public void SetText(string s)
@@ -32,6 +38,11 @@ public class CustomFontParser : MonoBehaviour
         string newString = "";
         foreach (char c in s)
         {
+            if (c == ' ')
+            {
+                newString += ' ';
+                continue;
+            }
             newString += "<sprite index=" + charIds[c].ToString() + ">";
         }
         text.text = newString;

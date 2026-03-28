@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d93c44269e8e434c9965fafa5b3e5f7, type: 3}
   m_Name: lap1
   m_EditorClassIdentifier: Assembly-CSharp::CarManagerLapValues
-  minSpawnWait: 0
-  spawnWaitRange: 0
-  prefab: {fileID: 0}
+  minSpawnWait: 15
+  spawnWaitRange: 10
+  prefab: {fileID: 1262860870692130172, guid: 424bad99a61d28e47beb285a58ea8f11, type: 3}

@@ -54,4 +54,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 893f0ccf05ae62647aaad522aa1cbdf5, type: 2}
   - {fileID: 11400000, guid: 9d8cb6e2b1a0b294b824d363651cba5c, type: 2}
   - {fileID: 11400000, guid: fef375e6561235e42b847f96c998ea32, type: 2}
+  text: {fileID: 0}
+  finishLine: {fileID: 2230907462487776216, guid: e07d62ad009b6254fae505015e2b3ccd, type: 3}
   CurrentLap: 0
