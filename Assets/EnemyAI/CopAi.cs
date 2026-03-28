@@ -5,8 +5,11 @@ public class CopAi : CarAI
 
     [SerializeField] GameObject oilPrefab;
 
-    private float targetYValue = 20;
-    private float targetXRange = 60;
+    [SerializeField] private float targetYValue = 20;
+    [SerializeField] private float targetXRange = 60;
+
+    [SerializeField] private float minSpillWaitTime;
+    [SerializeField] private float spillWaitTimeRange;
 
     private float startTimer;
     private float startWaitTime = 2;
@@ -72,7 +75,7 @@ public class CopAi : CarAI
         if (spillTimer > spillWaitTime)
         {
             spillTimer = 0;
-            spillWaitTime = Random.Range(.5f, 1f);
+            spillWaitTime = Random.Range(minSpillWaitTime, minSpillWaitTime + spillWaitTimeRange);
             Instantiate(oilPrefab, transform.position, Quaternion.identity);
         }
     }

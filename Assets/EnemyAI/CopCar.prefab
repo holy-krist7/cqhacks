@@ -30,8 +30,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -61.6, y: 47.1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 372157757752506200}
   m_Father: {fileID: 0}
@@ -48,8 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff0216f4645d1f3499281a3308123c1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarController
-  MaxDriveSpeed: 60
-  DriveAccel: 500
+  MaxDriveSpeed: 5
+  DriveAccel: 20
   angleRange: 30
   moveAction: {fileID: 0}
   rb: {fileID: 6521964175405517246}
@@ -141,6 +141,10 @@ MonoBehaviour:
   carController: {fileID: 6683213451182926704}
   drivePGain: 0.3
   oilPrefab: {fileID: 5150707203536436085, guid: eab328e7938a67a44a6a31c09c65c576, type: 3}
+  targetYValue: 4
+  targetXRange: 2.5
+  minSpillWaitTime: 2
+  spillWaitTimeRange: 1
 --- !u!1 &6258392206076800495
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,7 +224,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3926510062570508123, guid: d99085ea6ed5dc04eb18cc3abe469ea9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

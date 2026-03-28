@@ -121,8 +121,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -55, y: -68.3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2011725229538972556}
   m_Father: {fileID: 0}
@@ -139,8 +139,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff0216f4645d1f3499281a3308123c1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarController
-  MaxDriveSpeed: 30
-  DriveAccel: 200
+  MaxDriveSpeed: 4
+  DriveAccel: 40
   angleRange: 30
   moveAction: {fileID: 0}
   rb: {fileID: 2702996226660741561}
