@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class Tire : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public float moveSpeed = 5;
+    public float deadZone = -12;
 
-    // Update is called once per frame
+
     void Update()
     {
-        
+        transform.position = transform.position + (Vector3.down * moveSpeed) * Time.deltaTime;
+
+        if (transform.position.y < deadZone)
+        {
+            Debug.Log("Tire Deleted");
+            Destroy(gameObject);
+        }
     }
 }
