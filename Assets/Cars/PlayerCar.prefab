@@ -152,6 +152,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5393051481868690385}
   - component: {fileID: 4466987690114112322}
+  - component: {fileID: 4882314475037148852}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -233,3 +234,16 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &4882314475037148852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7634615964317099889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33a3d2c58995f7348abc698317d00f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CarSpriteChange
+  blackCar: {fileID: 7503233448024816006, guid: a504e4c0247625f47a2c03d53015a288, type: 3}
