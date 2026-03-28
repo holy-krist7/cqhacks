@@ -2,12 +2,15 @@ using Unity.Multiplayer.PlayMode;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class Obstacle : MonoBehaviour
 {
 
     private GameObject car;
     private Player player;
+
+    private bool isTimerRunning = false;
 
     private void Start()
     {
@@ -44,9 +47,25 @@ public class Obstacle : MonoBehaviour
 
                 if (player.playerHP <= 0)
                 {
-                    SceneManager.LoadScene("GameOver");
+                    //Time.timeScale = 0f;
+                   // StartCoroutine(TimerRoutine(1f));
+                    if (isTimerRunning == false)
+                    {
+                        SceneManager.LoadScene("GameOver");
+                    }
                 }
             }
         }
+    }
+
+    IEnumerator TimerRoutine(float duration)
+    {
+        isTimerRunning = true;
+        Debug.Log("Timer Started");
+
+        yield return new WaitForSeconds(duration);
+
+        Debug.Log("Timer Finished!");
+        isTimerRunning = false;
     }
 }
