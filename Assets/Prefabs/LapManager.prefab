@@ -46,9 +46,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LapManager
   CopCarManager: {fileID: 0}
   copValues:
-  - {fileID: 11400000, guid: 580b545b3086a2e42b2dba260952512c, type: 2}
-  - {fileID: 11400000, guid: 4d5b27b28c406954b9ed33f7a8729505, type: 2}
-  - {fileID: 11400000, guid: d8f67c3159bab2b4cb85b52da237886e, type: 2}
+  - {fileID: 11400000, guid: 73db12632d8034f4dad8ebfc4338e6dc, type: 2}
+  - {fileID: 11400000, guid: 97d9ba3a8a33ec24d86ef8b547173cc1, type: 2}
+  - {fileID: 11400000, guid: d1f1cbe7ad8b38c4ea01b43d1828f643, type: 2}
   EnemyCarManager: {fileID: 0}
-  enemyCarValues: []
+  enemyCarValues:
+  - {fileID: 11400000, guid: 893f0ccf05ae62647aaad522aa1cbdf5, type: 2}
+  - {fileID: 11400000, guid: 9d8cb6e2b1a0b294b824d363651cba5c, type: 2}
+  - {fileID: 11400000, guid: fef375e6561235e42b847f96c998ea32, type: 2}
   CurrentLap: 0

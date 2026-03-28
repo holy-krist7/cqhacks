@@ -23,4 +23,12 @@ public class EnemyCarManager : MonoBehaviour
             Instantiate(enemyCar, new Vector2(0, -10), Quaternion.identity);
         }
     }
+
+    public void Change(CarManagerLapValues vals)
+    {
+        minSpawnInterval = vals.minSpawnWait;
+        spawnIntervalRange = vals.spawnWaitRange;
+        enemyCar = vals.prefab;
+    }
+
 }

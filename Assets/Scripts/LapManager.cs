@@ -12,10 +12,17 @@ public class LapManager : MonoBehaviour
 
     public int CurrentLap;
 
+    private void Start()
+    {
+        CopCarManager.Change(copValues[CurrentLap]);
+        EnemyCarManager.Change(copValues[CurrentLap]);
+    }
+
     public void OnLap()
     {
         CurrentLap++;
         CopCarManager.Change(copValues[CurrentLap]);
+        EnemyCarManager.Change(copValues[CurrentLap]);
 
     }
 }
