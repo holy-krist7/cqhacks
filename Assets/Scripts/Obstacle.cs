@@ -1,29 +1,51 @@
 using Unity.Multiplayer.PlayMode;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Obstacle : MonoBehaviour
 {
+
     private GameObject car;
     private Player player;
-
 
     private void Start()
     {
         car = GameObject.FindGameObjectWithTag("Player");
         player = car.GetComponent<Player>();
     }
+
+    private void Update()
+    {
+        if (player.isCooldown == true)
+        {
+            player.timer += Time.deltaTime;
+
+            if (player.timer >= player.cooldownTime)
+            {
+                player.isCooldown = false;
+                Debug.Log("Player is out of cooldown");
+            }
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+        if(player.isCooldown == false)
         {
-            Debug.Log("obstacle hit the player");
-
-            player.playerHP--;
-
-            if (player.playerHP <= 0)
+            if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
             {
-                SceneManager.LoadScene("GameOver");
+                Debug.Log("obstacle hit the player");
+
+                player.playerHP--;
+
+                player.isCooldown = true;
+                Debug.Log("Player is in cooldown");
+
+                if (player.playerHP <= 0)
+                {
+                    SceneManager.LoadScene("GameOver");
+                }
             }
         }
     }
