@@ -586,13 +586,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6752391648508198733, guid: 76cfacd5dae9caa42a7223eb3502d72e, type: 3}
+      propertyPath: m_TagString
+      value: HeadSprite
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1431071833420172662, guid: 76cfacd5dae9caa42a7223eb3502d72e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 978334153}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6752391648508198733, guid: 76cfacd5dae9caa42a7223eb3502d72e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1400412424}
   m_SourcePrefab: {fileID: 100100000, guid: 76cfacd5dae9caa42a7223eb3502d72e, type: 3}
 --- !u!1 &365929012
 GameObject:
@@ -1655,6 +1662,28 @@ MonoBehaviour:
   - {fileID: 5195580172282923952, guid: bc17c63e3f0e7ed4cb074962efbf764d, type: 3}
   minSpawnTime: 2
   maxSpawnTime: 6
+--- !u!1 &1400412422 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6752391648508198733, guid: 76cfacd5dae9caa42a7223eb3502d72e, type: 3}
+  m_PrefabInstance: {fileID: 270325480}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1400412424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400412422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19499b62d256bfc45acf5ebb655a2f3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  shakeTimer: 0
+  shakeWaitTime: 10
+  shakeStrength: 100
+  shakeMagnitude: 0.1
+  isShaking: 0
 --- !u!1 &1522606091
 GameObject:
   m_ObjectHideFlags: 0

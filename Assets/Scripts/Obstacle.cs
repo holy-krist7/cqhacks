@@ -41,6 +41,8 @@ public class Obstacle : MonoBehaviour
                 Debug.Log("obstacle hit the player");
 
                 player.playerHP--;
+                SpriteShake head = GameObject.FindGameObjectWithTag("HeadSprite").GetComponent<SpriteShake>();
+                head.Shake(.2f, 60);
 
                 player.isCooldown = true;
                 Debug.Log("Player is in cooldown");

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Track
   - LapManager
+  - HeadSprite
   layers:
   - Default
   - TransparentFX
