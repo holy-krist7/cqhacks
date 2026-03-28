@@ -9,7 +9,7 @@ public class EnemyCarManager : MonoBehaviour
     [SerializeField] private GameObject enemyCar;
 
     private float spawnIntervalTimer;
-    private float spawnInteralWaitTime;
+    private float spawnInteralWaitTime = 10;
 
     private void Update()
     {
@@ -20,7 +20,7 @@ public class EnemyCarManager : MonoBehaviour
             spawnIntervalTimer = 0;
             spawnInteralWaitTime = Random.Range(minSpawnInterval, minSpawnInterval + spawnIntervalRange);
 
-            Instantiate(enemyCar, new Vector2(0, -50), Quaternion.identity);
+            Instantiate(enemyCar, new Vector2(0, -10), Quaternion.identity);
         }
     }
 }

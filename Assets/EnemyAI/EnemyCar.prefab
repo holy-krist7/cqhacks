@@ -79,7 +79,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2960055354297818631, guid: d27fa1d9cdf5c1248bb1839be8b9a7e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -231,6 +231,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyCarAi
   carController: {fileID: 6793027648511163326}
   drivePGain: 0.3
-  randomXRange: 60
-  chaseSpeed: 20
-  chaseAccel: 500
+  randomXRange: 3
+  chaseSpeed: 4
+  chaseAccel: 50
