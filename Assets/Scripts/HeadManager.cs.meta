@@ -1,2 +1,15 @@
 fileFormatVersion: 2
 guid: d528e3563269b9f41b00ceef0b2b97c0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - defaultSprite: {fileID: 7321433214894976799, guid: e5b33fd203bdbc741b5f3d9f96a716ef, type: 3}
+  - damagedSprite1: {fileID: 8338400919186522204, guid: 5c700bcad1c7af847a4a7d366ffcb615, type: 3}
+  - damagedSprite2: {fileID: 3993198357877097293, guid: 82dc26cae9ecb2a489eac870792ad368, type: 3}
+  - damagedSprite3: {fileID: -5805712893176158725, guid: 033576541915d2348a5f0d6de65b0cad, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
