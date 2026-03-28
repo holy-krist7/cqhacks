@@ -137,7 +137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6565892018220779115, guid: cd8c3f8e3e130f846913107e30ad67ea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.13066
+      value: -65.6
       objectReference: {fileID: 0}
     - target: {fileID: 6565892018220779115, guid: cd8c3f8e3e130f846913107e30ad67ea, type: 3}
       propertyPath: m_LocalPosition.y
@@ -446,110 +446,69 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &243831698470281649 stripped
+--- !u!1 &2119391235
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1262860870692130172, guid: 424bad99a61d28e47beb285a58ea8f11, type: 3}
-  m_PrefabInstance: {fileID: 6941239290508929131}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5976693285920492163 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6793027648511163326, guid: 424bad99a61d28e47beb285a58ea8f11, type: 3}
-  m_PrefabInstance: {fileID: 6941239290508929131}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 243831698470281649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff0216f4645d1f3499281a3308123c1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CarController
---- !u!114 &6565892018813559660
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2119391237}
+  - component: {fileID: 2119391236}
+  - component: {fileID: 2119391238}
+  m_Layer: 0
+  m_Name: EnemyCarManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2119391236
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 243831698470281649}
+  m_GameObject: {fileID: 2119391235}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1321a275da888734cac39a16a6615a99, type: 3}
+  m_Script: {fileID: 11500000, guid: f6396c2b35894964598bd38a7c5047fc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CopAi
-  carController: {fileID: 5976693285920492163}
-  drivePGain: 0.3
-  oilPrefab: {fileID: 5150707203536436085, guid: eab328e7938a67a44a6a31c09c65c576, type: 3}
---- !u!1001 &6941239290508929131
-PrefabInstance:
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyCarManager
+  minSpawnInterval: 2
+  spawnIntervalRange: 6
+  enemyCar: {fileID: 1262860870692130172, guid: 424bad99a61d28e47beb285a58ea8f11, type: 3}
+--- !u!4 &2119391237
+Transform:
   m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119391235}
   serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1262860870692130172, guid: 424bad99a61d28e47beb285a58ea8f11, type: 3}
-      propertyPath: m_Name
-      value: EnemyCar
-      objectReference: {fileID: 0}
-    - target: {fileID: 2247036765742051382, guid: 424bad99a61d28e47beb285a58ea8f11, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -61.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2247036765742051382, guid: 424bad99a61d28e47beb285a58ea8f11, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 47.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2247036765742051382, guid: 424bad99a61d28e47beb285a58ea8f11, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2247036765742051382, guid: 424bad99a61d28e47beb285a58ea8f11, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2247036765742051382, guid: 424bad99a61d28e47beb285a58ea8f11, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2247036765742051382, guid: 424bad99a61d28e47beb285a58ea8f11, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2247036765742051382, guid: 424bad99a61d28e47beb285a58ea8f11, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2247036765742051382, guid: 424bad99a61d28e47beb285a58ea8f11, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2247036765742051382, guid: 424bad99a61d28e47beb285a58ea8f11, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2247036765742051382, guid: 424bad99a61d28e47beb285a58ea8f11, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3163400609079078716, guid: 424bad99a61d28e47beb285a58ea8f11, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 3926510062570508123, guid: d99085ea6ed5dc04eb18cc3abe469ea9, type: 3}
-    - target: {fileID: 6793027648511163326, guid: 424bad99a61d28e47beb285a58ea8f11, type: 3}
-      propertyPath: DriveAccel
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 6793027648511163326, guid: 424bad99a61d28e47beb285a58ea8f11, type: 3}
-      propertyPath: MaxDriveSpeed
-      value: 60
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7910495627183457700, guid: 424bad99a61d28e47beb285a58ea8f11, type: 3}
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1262860870692130172, guid: 424bad99a61d28e47beb285a58ea8f11, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6565892018813559660}
-  m_SourcePrefab: {fileID: 100100000, guid: 424bad99a61d28e47beb285a58ea8f11, type: 3}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -28.3149, y: -7.98115, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2119391238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119391235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 974fc298c2e66cf4a9d9ca64725c493d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CopCarManager
+  minSpawnInterval: 10
+  spawnIntervalRange: 0
+  enemyCar: {fileID: 4511722249855077643, guid: 28a1b0f3b8c36914b922fca0391fa2ee, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -557,5 +516,5 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 195673934}
-  - {fileID: 6941239290508929131}
   - {fileID: 481299107}
+  - {fileID: 2119391237}

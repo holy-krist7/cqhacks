@@ -39,7 +39,7 @@ public class CopAi : CarAI
                 break; 
 
             case 1:
-                Phase1();
+                SwayPhase();
                 break;
 
             case 2:
@@ -50,7 +50,7 @@ public class CopAi : CarAI
         }
     }
 
-    void Phase1()
+    void SwayPhase()
     {
         startTimer += Time.deltaTime;
         spillTimer += Time.deltaTime;
