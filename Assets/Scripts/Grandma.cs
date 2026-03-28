@@ -1,7 +1,11 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Grandma : MonoBehaviour
 {
+    public GameObject player;
+    public Player currentPlayer;
+
     public float xMoveSpeed = 5;
     public float yMoveSpeed = 5;
     public float deadZone = -12;
@@ -9,9 +13,11 @@ public class Grandma : MonoBehaviour
     private float xDirection = -1f;
     private SpriteRenderer sr;
 
+
     private void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
+        currentPlayer = player.GetComponent<Player>();
     }
 
     public void SetDirection(float direction)
@@ -46,6 +52,12 @@ public class Grandma : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             Debug.Log("Grandma hit the player");
+            currentPlayer.playerHP -= 1;
+
+            if (currentPlayer.playerHP <= 0)
+            {
+                SceneManager.LoadScene("GameOver");
+            }
         }
     }
 }

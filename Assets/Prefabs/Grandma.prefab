@@ -170,6 +170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0692c5ef9adb5df4d894e1fcf82b8061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  player: {fileID: 243831698954257585, guid: cd8c3f8e3e130f846913107e30ad67ea, type: 3}
+  currentPlayer: {fileID: 0}
   xMoveSpeed: 8
   yMoveSpeed: 5
   deadZone: -12
