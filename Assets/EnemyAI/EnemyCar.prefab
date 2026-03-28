@@ -231,6 +231,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyCarAi
   carController: {fileID: 6793027648511163326}
   drivePGain: 0.3
-  randomXRange: 7.5
+  randomXRange: 60
   chaseSpeed: 20
   chaseAccel: 500
