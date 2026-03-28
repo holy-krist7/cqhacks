@@ -15,7 +15,7 @@ public class LapManager : MonoBehaviour
     public GameObject finishLine;
 
     private float lapTimer;
-    private float lapWaitTimer = 15;
+    private float lapWaitTimer = 10;
 
 
     public int CurrentLap;
