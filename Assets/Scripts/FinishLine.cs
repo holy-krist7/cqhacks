@@ -8,6 +8,7 @@ public class FinishLine : MonoBehaviour
         {
             // increase lap
             Debug.Log("next lap");
+            GameObject.FindGameObjectWithTag("LapManager").GetComponent<LapManager>().OnLap();
             Destroy(GetComponent<BoxCollider2D>());
         }
     }

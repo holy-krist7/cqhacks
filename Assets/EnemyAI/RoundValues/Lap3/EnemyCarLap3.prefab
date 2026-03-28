@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 5482587613216040341}
   - component: {fileID: 7910495627183457700}
   m_Layer: 0
-  m_Name: EnemyCar
+  m_Name: EnemyCarLap3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff0216f4645d1f3499281a3308123c1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarController
-  MaxDriveSpeed: 4
+  MaxDriveSpeed: 7
   DriveAccel: 40
   angleRange: 30
   moveAction: {fileID: 0}
@@ -232,5 +232,5 @@ MonoBehaviour:
   carController: {fileID: 6793027648511163326}
   drivePGain: 0.3
   randomXRange: 3
-  chaseSpeed: 4
-  chaseAccel: 50
+  chaseSpeed: 7
+  chaseAccel: 75

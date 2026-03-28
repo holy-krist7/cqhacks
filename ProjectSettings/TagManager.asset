@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Track
+  - LapManager
   layers:
   - Default
   - TransparentFX
