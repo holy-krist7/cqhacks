@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using Unity.VectorGraphics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LapManager : MonoBehaviour
 {
@@ -40,7 +42,7 @@ public class LapManager : MonoBehaviour
 
         if (CurrentLap >= 3)
         {
-            return;
+            SceneManager.LoadScene("WinScene");
         }
 
         CopCarManager.Change(copValues[CurrentLap]);
