@@ -1,16 +1,30 @@
+using Unity.Multiplayer.PlayMode;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Obstacle : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    private GameObject car;
+    private Player player;
 
-    // Update is called once per frame
-    void Update()
+
+    private void Start()
     {
-        
+        car = GameObject.FindGameObjectWithTag("Player");
+        player = car.GetComponent<Player>();
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
+            Debug.Log("obstacle hit the player");
+
+            player.playerHP--;
+
+            if (player.playerHP <= 0)
+            {
+                SceneManager.LoadScene("GameOver");
+            }
+        }
     }
 }

@@ -44,12 +44,4 @@ public class Projectile : MonoBehaviour
             Debug.Log("Projectile Destroyed");
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
-        {
-            Debug.Log("Projectile hit the player");
-        }
-    }
 }

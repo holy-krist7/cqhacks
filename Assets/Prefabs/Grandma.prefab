@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5720996915019044128}
   - component: {fileID: 7967059449003377177}
   - component: {fileID: 7873969127141561454}
+  - component: {fileID: 2889264553604709712}
   m_Layer: 0
   m_Name: Grandma
   m_TagString: Untagged
@@ -170,8 +171,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0692c5ef9adb5df4d894e1fcf82b8061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  player: {fileID: 243831698954257585, guid: cd8c3f8e3e130f846913107e30ad67ea, type: 3}
-  currentPlayer: {fileID: 0}
   xMoveSpeed: 8
   yMoveSpeed: 5
   deadZone: -12
+--- !u!114 &2889264553604709712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5039981744849790059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e72d738002b0b24ab06b5aac58adb1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  car: {fileID: 243831698954257585, guid: cd8c3f8e3e130f846913107e30ad67ea, type: 3}
+  player: {fileID: 0}
