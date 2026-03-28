@@ -5,6 +5,9 @@ public class CopAi : CarAI
 
     [SerializeField] GameObject oilPrefab;
 
+    private float targetYValue = 20;
+    private float targetXRange = 60;
+
     private float startTimer;
     private float startWaitTime = 2;
 
@@ -17,7 +20,7 @@ public class CopAi : CarAI
 
     private void Start()
     {
-        currentTargetPosition = new(Random.Range(-.1f, .1f), 4);
+        currentTargetPosition = new(Random.Range(-.1f, .1f), targetYValue);
     }
 
     override protected void Update()
@@ -40,8 +43,9 @@ public class CopAi : CarAI
                 break;
 
             case 2:
-                currentTargetPosition = transform.position + Vector3.up * 10;
+                currentTargetPosition = new(transform.position.x, 100);
                 phase++;
+                Destroy(gameObject, 10);
                 break;
         }
     }
@@ -62,7 +66,7 @@ public class CopAi : CarAI
             startTimer = 0;
             swayCount++;
 
-            currentTargetPosition = new(transform.position.x > 0? -7: 7, 4);
+            currentTargetPosition = new(transform.position.x > 0? -targetXRange: targetXRange, targetYValue);
         }
 
         if (spillTimer > spillWaitTime)

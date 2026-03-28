@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class EnemyCarAi : CarAI
 {
+    public float randomXRange = 7.5f;
+    public float chaseSpeed = 20;
+    public float chaseAccel = 500;
+
     private void Start()
     {
         Phase1();
@@ -9,32 +13,32 @@ public class EnemyCarAi : CarAI
 
     void Phase1()
     {
-        var randomX = Random.Range(-7.5f, 7.5f);
-        var randomPoint = new Vector2(randomX, -3);
+        var randomX = Random.Range(-randomXRange, randomXRange);
+        var randomPoint = new Vector2(randomX, -20);
         currentTargetPosition = randomPoint;
 
         carController.DriveAccel = 100;
 
-        Invoke("Phase2", Random.Range(4f, 6));
+        Invoke("Phase2", Random.Range(4, 6));
     }
 
 
     void Phase2()
     {
         targetPlayer = GameObject.FindGameObjectWithTag("Player").transform;
-        carController.MaxDriveSpeed = 3;
-        carController.DriveAccel = 10;
+        carController.MaxDriveSpeed = chaseSpeed;
+        carController.DriveAccel = chaseAccel;
 
-        Invoke("Phase3", 8);
+        Invoke("Phase3", 6);
     }
 
 
     void Phase3()
     {
         targetPlayer = null;
-        currentTargetPosition = new Vector2(transform.position.x, -9);
+        currentTargetPosition = new Vector2(transform.position.x, -100);
 
-        carController.MaxDriveSpeed = 6;
+        carController.MaxDriveSpeed = 30;
 
         Destroy(gameObject, 5);
     }
