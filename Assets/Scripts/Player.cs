@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public float cooldownTime = 2f;
     public float timer = 0;
     public bool isCooldown = false;
+    public bool isDead = false;
 
     private SpriteRenderer sr;
 
@@ -49,5 +50,22 @@ public class Player : MonoBehaviour
     public void StartFlash()
     {
         StartCoroutine(FlashSprite());
+    }
+
+    public IEnumerator DeathSequence()
+    {
+        isDead = true;
+
+        Debug.Log("Player died");
+
+        GetComponentInChildren<CarSpriteChange>().SetBlack();
+
+        // ScreenFlash.Instance.FlashRed();
+
+        yield return new WaitForSeconds(2f);
+
+        // yield return new WaitForSeconds(1f);
+
+        SceneManager.LoadScene("GameOver");
     }
 }

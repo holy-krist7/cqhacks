@@ -36,9 +36,9 @@ public class Obstacle : MonoBehaviour
                 player.StartFlash();
                 Debug.Log("Player is in cooldown");
 
-                if (player.playerHP <= 0)
+                if (player.playerHP <= 0 && !player.isDead)
                 {
-                    SceneManager.LoadScene("GameOver");
+                    player.StartCoroutine(player.DeathSequence());
                 }
             }
         }
