@@ -15,6 +15,7 @@ public class TrackManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // spawn a new track after timer is out
         if (timer < spawnRate)
         {
             timer += Time.deltaTime;
@@ -26,6 +27,7 @@ public class TrackManager : MonoBehaviour
         }
     }
 
+    // spawn track
     void spawnTrack()
     {
         Instantiate(track, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
