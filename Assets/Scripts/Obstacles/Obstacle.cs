@@ -29,13 +29,16 @@ public class Obstacle : MonoBehaviour
 
                 player.playerHP--;
 
+                // shake head sprite
                 SpriteShake head = GameObject.FindGameObjectWithTag("HeadSprite").GetComponent<SpriteShake>();
                 head.Shake(.2f, 60);
 
+                // start cooldown sequence
                 player.isCooldown = true;
                 player.StartFlash();
                 Debug.Log("Player is in cooldown");
 
+                // check if player has enough hp to die
                 if (player.playerHP <= 0 && !player.isDead)
                 {
                     player.StartCoroutine(player.DeathSequence());

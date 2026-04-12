@@ -16,6 +16,7 @@ public class Grandma : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
     }
 
+    // set a random direction
     public void SetDirection(float direction)
     {
         xDirection = direction;
@@ -26,6 +27,7 @@ public class Grandma : MonoBehaviour
         }
     }
 
+    // set the move speed randomly
     private void Start()
     {
         xMoveSpeed = Random.Range(2, 4);
@@ -33,9 +35,11 @@ public class Grandma : MonoBehaviour
 
     void Update()
     {
+        // move grandma
         Vector3 movement = new Vector3(xDirection * xMoveSpeed, -yMoveSpeed, 0f);
         transform.position += movement * Time.deltaTime;
 
+        // delete the grandma object once off screen
         if (transform.position.y < deadZone)
         {
             Debug.Log("Grandma Deleted");

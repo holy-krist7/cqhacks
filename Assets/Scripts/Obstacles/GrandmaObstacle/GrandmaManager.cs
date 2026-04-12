@@ -10,7 +10,7 @@ public class GrandmaManager : MonoBehaviour
     private float currentSpawnTime;
     private float timer = 0;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // create random spawn position
     void Start()
     {
         spawnX = Random.Range(-2.5f, 2.5f);
@@ -22,6 +22,7 @@ public class GrandmaManager : MonoBehaviour
     {
         timer += Time.deltaTime;
 
+        // spawn another grandma once timer runs out and set a new time
         if (timer >= currentSpawnTime)
         {
             spawnGrandma();
