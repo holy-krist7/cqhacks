@@ -11,13 +11,8 @@ public class PauseMenuManager : MonoBehaviour
     {
         pauseMenu.SetActive(false);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
+    // can pause or resume using escape key
     void OnCancel()
     {
         if (isPaused)
@@ -30,6 +25,7 @@ public class PauseMenuManager : MonoBehaviour
         }
     }
 
+    // pause the game
     public void PauseGame()
     {
         pauseMenu.SetActive(true);
@@ -37,6 +33,7 @@ public class PauseMenuManager : MonoBehaviour
         isPaused = true;
     }
 
+    // resumes the game
     public void ResumeGame()
     {
         pauseMenu.SetActive(false);
@@ -44,6 +41,7 @@ public class PauseMenuManager : MonoBehaviour
         isPaused = false;
     }
 
+    // switches to the main menu
     public void GoToMainMenu()
     {
         Time.timeScale = 1f;
