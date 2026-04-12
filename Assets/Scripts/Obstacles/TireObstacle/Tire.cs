@@ -8,8 +8,10 @@ public class Tire : MonoBehaviour
 
     void Update()
     {
+        // move tire down
         transform.position = transform.position + (Vector3.down * moveSpeed) * Time.deltaTime;
 
+        // destroy object off screen
         if (transform.position.y < deadZone)
         {
             Debug.Log("Tire Deleted");

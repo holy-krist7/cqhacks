@@ -11,6 +11,7 @@ public class TireManager : MonoBehaviour
     private float currentSpawnTime;
     private float timer = 0;
 
+    // set random spawn position and time
     private void Start()
     {
         spawnX = Random.Range(-2.5f, 2.5f);
@@ -21,6 +22,7 @@ public class TireManager : MonoBehaviour
     {
         timer += Time.deltaTime;
 
+        // spawn tire and restart timer
         if (timer >= currentSpawnTime)
         {
             SpawnTire();
@@ -30,6 +32,7 @@ public class TireManager : MonoBehaviour
         }
     }
 
+    // spawn a tire
     void SpawnTire()
     {
         spawnX = Random.Range(-2.5f, 2.5f);
