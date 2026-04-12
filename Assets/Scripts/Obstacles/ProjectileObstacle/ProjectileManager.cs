@@ -11,7 +11,7 @@ public class ProjectileManager : MonoBehaviour
     private float timer = 0;
     private float yPosition = 0;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // set random spawn time
     void Start()
     {
         currentSpawnTime = Random.Range(minSpawnTime, maxSpawnTime);
@@ -22,6 +22,7 @@ public class ProjectileManager : MonoBehaviour
     {
         timer += Time.deltaTime;
 
+        // spawn a new projectile and restart the time
         if (timer >= currentSpawnTime)
         {
             spawnProjectile();
@@ -31,6 +32,7 @@ public class ProjectileManager : MonoBehaviour
         }
     }
 
+    // set random y position and sprite
     void spawnProjectile()
     {
         yPosition = Random.Range(0, 4);

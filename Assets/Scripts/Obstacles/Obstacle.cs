@@ -11,7 +11,6 @@ public class Obstacle : MonoBehaviour
     private GameObject car;
     private Player player;
 
-    private bool isTimerRunning = false;
 
     private void Start()
     {

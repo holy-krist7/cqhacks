@@ -12,6 +12,7 @@ public class Projectile : MonoBehaviour
 
     private Vector3 moveDirection;
 
+    // set random stoping position and direction
     void Start()
     {
         stopX = Random.Range(-2.5f, 2.5f);
@@ -22,7 +23,7 @@ public class Projectile : MonoBehaviour
 
     void Update()
     {
-        if (isShot)
+        if (isShot) // move the projectile in moveDirections direction
         {
             transform.position += moveDirection * shootSpeed * Time.deltaTime;
 
@@ -33,11 +34,12 @@ public class Projectile : MonoBehaviour
                 isShot = false;
             }
         }
-        else
+        else // stop the projectile and move down
         {
             transform.position = transform.position + (Vector3.down * moveSpeed) * Time.deltaTime;
         }
 
+        // destroy projectile object off screen
         if (transform.position.y < deadZone)
         {
             Destroy(gameObject);
