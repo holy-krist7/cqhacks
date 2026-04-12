@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        // start timer for cooldown
         if (isCooldown)
         {
             timer += Time.deltaTime;
@@ -34,6 +35,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    // flash the sprite while player is in cooldown
     public IEnumerator FlashSprite()
     {
         while (isCooldown)
@@ -48,6 +50,7 @@ public class Player : MonoBehaviour
         sr.enabled = true;
     }
 
+    // start the flash
     public void StartFlash()
     {
         if (flashRoutine != null)
@@ -58,6 +61,7 @@ public class Player : MonoBehaviour
         flashRoutine = StartCoroutine(FlashSprite());
     }
 
+    // start the death sequence
     public IEnumerator DeathSequence()
     {
 
