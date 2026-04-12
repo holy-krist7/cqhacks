@@ -27,6 +27,7 @@ public class HeadManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // switch the sprite based on player hp
         switch (player.playerHP)
         {
             case 3:

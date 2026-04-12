@@ -11,6 +11,7 @@ public class CarSpriteChange : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
     }
 
+    // change the car sprite into a black car
     public void SetBlack()
     {
         sr.sprite = blackCar;
