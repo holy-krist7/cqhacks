@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public bool isDead = false;
 
     private SpriteRenderer sr;
+    private Coroutine flashRoutine;
 
     private void Start()
     {
@@ -49,22 +50,35 @@ public class Player : MonoBehaviour
 
     public void StartFlash()
     {
-        StartCoroutine(FlashSprite());
+        if (flashRoutine != null)
+        {
+            StopCoroutine(flashRoutine);
+        }
+
+        flashRoutine = StartCoroutine(FlashSprite());
     }
 
     public IEnumerator DeathSequence()
     {
+
         isDead = true;
 
         Debug.Log("Player died");
 
+        if (flashRoutine != null)
+        {
+            StopCoroutine(flashRoutine);
+        }
+
+        sr.enabled = true;
+
+        Time.timeScale = 0f;
+
         GetComponentInChildren<CarSpriteChange>().SetBlack();
 
-        // ScreenFlash.Instance.FlashRed();
+        yield return new WaitForSecondsRealtime(2f);
 
-        yield return new WaitForSeconds(2f);
-
-        // yield return new WaitForSeconds(1f);
+        Time.timeScale = 1f;
 
         SceneManager.LoadScene("GameOver");
     }
