@@ -23,10 +23,20 @@ public class Obstacle : MonoBehaviour
         if(player.isCooldown == false)
         {
             if (collision.CompareTag("Player"))
-            {
+            { 
+
                 Debug.Log("obstacle hit the player");
 
                 player.playerHP--;
+
+                if (player.playerHP == 0)
+                {
+                    FindFirstObjectByType<AudioManager>().Play("Fail");
+                }
+                else
+                {
+                    FindFirstObjectByType<AudioManager>().Play("Impact");
+                }
 
                 // shake head sprite
                 SpriteShake head = GameObject.FindGameObjectWithTag("HeadSprite").GetComponent<SpriteShake>();
